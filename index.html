@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>تطبيق مؤسسة مرمرة</title>
+    <title>نظام مرمرة المحاسبي</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <meta name="theme-color" content="#0f172a">
     <style>
         body, html {
             margin: 0;
@@ -23,5 +27,10 @@
 </head>
 <body>
     <iframe src="https://script.google.com/macros/s/AKfycbxVLIBdOLEeX1r2z8qyE9oDdGbuMR3PlLANK8zHrL27q78ILiNTw-eugJ17fxsjvW5s/exec" allow="geolocation; microphone; camera"></iframe>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </body>
 </html>
